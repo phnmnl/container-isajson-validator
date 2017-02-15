@@ -1,2 +1,1 @@
-which run_validator.py
 which run_test.sh
