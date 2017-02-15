@@ -2,6 +2,7 @@ FROM ubuntu:16.04
 
 MAINTAINER PhenoMeNal-H2020 Project ( phenomenal-h2020-users@googlegroups.com )
 
+LABEL Description="Validate an ISA JSON file"
 LABEL software.version="0.5.0"
 LABEL version="0.1"
 LABEL software="isajson-validator"
@@ -10,12 +11,14 @@ RUN apt-get update && apt-get install -y --no-install-recommends python3-pip && 
     pip3 install --upgrade pip && \
     pip3 install -U setuptools && \
     pip3 install isatools==0.5.0 && \
-    apt-get -y clean && apt-get -y autoremove
+    apt-get purge -y python3-pip gcc libxml2-dev libxslt-dev python3-lxml && \
+    apt-get install --no-install-recommends python3 && \
+    apt-get autoremove -y && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 ADD run_test.sh /usr/local/bin/run_test.sh
 RUN chmod a+x /usr/local/bin/run_test.sh
 
-ADD run_validator.py /
-RUN chmod a+x run_validator.py
+ADD run_test.sh /usr/local/bin/run_validator.sh
+RUN chmod a+x /usr/local/bin/run_validator.sh
 
-ENTRYPOINT ["python3", "run_validator.py"]
+ENTRYPOINT ["run_validator.py"]
