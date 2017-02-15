@@ -1,11 +1,16 @@
 FROM ubuntu:16.04
-LABEL Description="Validate an ISA JSON file"
-MAINTAINER David Johnson, david.johnson@oerc.ox.ac.uk
-RUN apt-get -y update
-RUN apt-get -y install --no-install-recommends python3-pip
-RUN pip3 install --upgrade pip
-RUN pip3 install -U setuptools
-RUN pip3 install isatools==0.3.4
+
+MAINTAINER PhenoMeNal-H2020 Project ( phenomenal-h2020-users@googlegroups.com )
+
+LABEL software.version="0.5.0"
+LABEL version="0.1"
+LABEL software="ISA-JSON Validator"
+
+RUN apt-get update && apt-get install -y -no-install-recommends python3-pip && \
+    pip3 install --upgrade pip && \
+    pip3 install -U setuptools && \
+    pip3 install isatools==0.5.0 && \
+    apt-get -y clean && apt-get -y autoremove
 
 ADD run_test.sh /usr/local/bin/run_test.sh
 RUN chmod +x /usr/local/bin/run_test.sh
