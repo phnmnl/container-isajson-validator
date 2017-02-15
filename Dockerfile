@@ -18,7 +18,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends python3-pip && 
 ADD run_test.sh /usr/local/bin/run_test.sh
 RUN chmod a+x /usr/local/bin/run_test.sh
 
-ADD run_test.sh /usr/local/bin/run_validator.sh
-RUN chmod a+x /usr/local/bin/run_validator.sh
+ADD run_validator.py /
 
-ENTRYPOINT ["run_validator.py"]
+ENTRYPOINT ["python3", "run_validator.py"]
