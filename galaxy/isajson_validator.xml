@@ -6,7 +6,7 @@
   ]]>
   </command>
   <inputs>
-      <param name="isa_file" type="data" format="json" label="ISA-JSON file." optional="false"/>
+      <param name="isa_file" type="data" format="json" label="ISA-JSON file." optional="false" help="The input JSON file should be an ISA-JSON format JSON file."/>
   </inputs>
   <outputs>
     <data format="json" name="output" from_work_dir="report.json" label="Validation report in JSON format" />
