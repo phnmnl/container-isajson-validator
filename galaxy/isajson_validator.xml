@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <tool id="isajson_validator" name="isajson_validator" version="1.0">
-  <description>Produce a validation report on an ISA-Tab ZIP archive</description>
+  <description>Produce a validation report on an ISA-JSON file</description>
   <command><![CDATA[
     run_validator.py $isa_file
   ]]>
@@ -66,6 +66,7 @@ The current set of validation rules that have been implemented are listed in thi
 
 <!-- @@@END_RST@@@ -->
   </help>
+
   <citations>
     <citation type="doi">10.5281/zenodo.163640</citation>
     <citation type="doi">10.1038/ng.1054</citation>
