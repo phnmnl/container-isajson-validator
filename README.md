@@ -1,7 +1,7 @@
 ![Logo](isa-api_logo.png)
 
 # ISA-JSON Validator
-Version: 0.8.3
+Version: 0.9.4
 
 ## Short Description
 
