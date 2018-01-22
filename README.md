@@ -1,7 +1,7 @@
 ![Logo](isa-api_logo.png)
 
 # ISA-JSON Validator
-Version: 0.8.3
+Version: 0.9.4
 
 ## Short Description
 
@@ -18,7 +18,17 @@ validator produces a validation report on a ISA-JSON formatted document.
 
 ## Functionality
 
-- Other Tools
+- Data Management / Study Metadata Syntactic Validation
+
+## Approaches
+
+- Metabolomics
+- Isotopic Labelling Analysis
+
+## Instrument Data Types
+
+- MS
+- NMR
 
 ## Tool Authors
 
@@ -27,6 +37,7 @@ validator produces a validation report on a ISA-JSON formatted document.
 ## Container Contributors
 
 - [David Johnson](https://github.com/djcomlab) (University of Oxford)
+- [Philippe Rocca-Serra](https://github.com/proccaserra) (University of Oxford)
 
 ## Website
 

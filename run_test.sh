@@ -1,8 +1,8 @@
 #!/bin/bash
 
-apt-get update && apt-get install -y --no-install-recommends wget
+apk update && apk add ca-certificates && update-ca-certificates && apk add openssl
 wget --no-check-certificate https://raw.githubusercontent.com/ISA-tools/ISAdatasets/master/json/BII-I-1/BII-I-1.json
-run_validator.py BII-I-1.json
+run_validator.py ./BII-I-1.json
 
 # check that files were created
 if ! [ -e "/report.json" ]; then
